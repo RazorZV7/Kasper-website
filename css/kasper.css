@@ -94,10 +94,11 @@ ul {
 /* end components  */
 /* start header  */
 header {
-  position: absolute;
+  position: fixed;
+  background-color: black;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
 }
 header .container {
   display: flex;
@@ -115,6 +116,10 @@ header .container::after {
   width: calc(100% - 45px);
   bottom: 0;
   left: 30px;
+}
+header .logo {
+  background-color: white;
+  border: none;
 }
 header .logo img {
   height: 50px;
@@ -157,8 +162,8 @@ header .container nav ul a {
   /* border: 1px solid cadetblue; */
   color: black;
   text-decoration: none;
+  text-transform: uppercase;
   font-size: 14px;
-  text-transform: capitalize;
   transition: 0.3s;
   position: relative;
   z-index: 1;
@@ -231,7 +236,8 @@ header .container nav .toggle-menu {
 }
 .landing .text h2 {
   font-size: 25px;
-  font-weight: normal;
+  font-weight: lighter;
+  text-transform: uppercase;
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -390,12 +396,27 @@ header .container nav .toggle-menu {
 .portfolio {
   padding: var(--sections-padding);
 }
-.portfolio .shuffle {
-  display: flex;
-  justify-content: center;
+@media (max-width: 340px) {
+  .portfolio .shuffle {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 341px) {
+  .portfolio .shuffle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .portfolio .shuffle li {
   padding: 1em;
+  text-transform: capitalize;
+  text-align: center;
   /* border: 1px solid; */
 }
 .portfolio .shuffle li.active,
@@ -435,7 +456,7 @@ header .container nav .toggle-menu {
 .portfolio .img-container {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   /* grid-template-columns: repeat(2, 400px); */
   /* grid-template-rows: repeat(3, 1fr); */
 }
@@ -472,3 +493,117 @@ header .container nav .toggle-menu {
 }
 /* end grid system  */
 /* end portfolio  */
+/* start awesome video  */
+.awesome {
+  padding: 150px 0;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blue-awesome {
+  background-color: var(--transparent-color);
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+.blue-awesome h2{
+  font-size: 25px;
+  font-weight: lighter;
+}
+.blue-awesome button {
+  padding: 5px 30px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+.blue-awesome h2,
+.blue-awesome button {
+  text-transform: uppercase;
+  text-align: center;
+}
+/* start awesome video  */
+/* start about us  */
+.about-us {
+  position: relative;
+  padding: 100px 0 0;
+}
+.about-us .main-heading{
+  padding-bottom: 0;
+}
+.about-us .image {
+  position: relative;
+  text-align: center;
+  /* z-index: 2; */
+  overflow: hidden;
+}
+.about-us .image img{
+  position: relative;
+  top: 120px;
+  right: 40px;
+  /* z-index: 2; */
+}
+@media (max-width: 767px) {
+  .about-us {
+    padding-bottom: 100px;
+  }
+  .about-us .image {
+    display: none;
+  }
+}
+/* end about us  */
+/* start statistics  */
+.statistics {
+  background-color: black;
+  padding: 100px 0;
+  text-align: center;
+}
+@media (max-width: 576px) {}
+.statistics .container{
+  background-color: var(--transparent-color);
+  color: white;
+  padding: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+@media (min-width: 577px) {
+  .statistics .container{
+    background-color: var(--transparent-color);
+    color: white;
+    padding: 50px 25px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    grid-template-rows: repeat(2, 300px);
+  }
+}
+@media (min-width: 768px) {
+  .statistics .container{
+    background-color: var(--transparent-color);
+    color: white;
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.statistics .stat-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.statistics .stat-box h2{
+  font-size: 50px;
+}
+/* end statistics  */
