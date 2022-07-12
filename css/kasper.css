@@ -11,6 +11,7 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
 }
 ul {
   list-style: none;
@@ -607,3 +608,167 @@ header .container nav .toggle-menu {
   font-size: 50px;
 }
 /* end statistics  */
+/* start skills  */
+@media (max-width: 768px) {
+  .skills .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .separator {
+    display: block;
+    width: 100%;
+    height: 80px;
+    margin: 25px 0;
+    background-color: var(--transparent-color);
+  }
+  .testimonials .testi{
+    margin-bottom: none;
+  }
+}
+.skills .container {
+  text-align: center;
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.testimonials {
+  display: flex;
+  height: 100%;
+  width: 45%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 5px; */
+}
+.testimonials h3,
+.our-skills h3{
+  text-transform: uppercase;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+.testimonials .testi p,
+.our-skills > p{
+  font-size: 14px;
+  margin-bottom: 45px;
+}
+.testimonials .box {
+  display: flex;
+  width: 100%;
+  min-width: 280px;
+  /* margin-top: 30px; */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 35px;
+}
+.testimonials .min-box {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.testimonials .min-box .img{
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #eee;
+}
+.testimonials .min-box .text{
+  width: 60%;
+  position: relative;
+  padding-bottom: 30px;
+  border-bottom: 1px solid;
+}
+.testimonials .min-box .text p:last-of-type {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  width: auto;
+  font-size: 13px;
+  font-weight: 100;
+  font-style: italic;
+  color: #777;
+}
+.our-skills {
+  position: relative;
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.our-skills .box {
+  width: 100%;
+  min-width: 280px;
+  text-align: left;
+  padding: 0 35px;
+}
+.our-skills .box .min-box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.our-skills .box .min-box h4{
+  margin-left: 5px;
+  font-weight: 100;
+}
+.our-skills .box .min-box .bar{
+  width: 100%;
+  height: 30px;
+  background-color: #eee;
+}
+.our-skills .box .min-box .bar-deg{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: var(--main-color);
+}
+.our-skills .box .min-box .bar-01{
+  width: 95%;
+}
+.our-skills .box .min-box .bar-02{
+  width: 85%;
+}
+.our-skills .box .min-box .bar-03{
+  width: 40%;
+}
+.our-skills .box .min-box .bar-04{
+  width: 60%;
+}
+.bullets-skills {
+  display: flex;
+  margin-top: 55px;
+}
+.bullets-skills li {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.bullets-skills li.active {
+  background-color: var(--main-color);
+  border-color: var(--transparent-color);
+}
+/* end skills  */
+/* start quote  */
+.quote {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+.quote p {
+  font-size: 14px;
+  margin-top: 15px;
+}
+/* end quote  */
