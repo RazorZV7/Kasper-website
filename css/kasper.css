@@ -773,15 +773,55 @@ header .container nav .toggle-menu {
 }
 /* end quote  */
 /* start pricing  */
+.pricing {
+  padding: 100px 0;
+}
+.pricing .box {
+  min-width: 200px;
+}
+.pricing .box button {
+  margin-top: 40px;
+  font-size: 15px;
+  padding: 10px 25px;
+  background-color: white;
+  border: 1px solid var(--main-color);
+}
 .pricing .pr-cont {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 }
 .pricing .contact {
   width: 40%;
-  margin: 0 auto;
+  margin: 60px auto 0;
   text-align: center;
+}
+.pricing .pr-cont .box .head {
+  width: 100%;
+  padding: 10px 0;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .pr-cont .box .head p{
+  text-transform: uppercase;
+}
+.pricing .pr-cont .box .head h3{
+  font-size: 55px;
+}
+.pricing .feat-box {
+  text-transform: capitalize;
+  /* padding: 10px 0; */
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .feat-box .feat-3{
+  width: 50%;
+  font-size: 15px;
+  padding: 10px 0;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .feat-box .last-feat {
+  padding: 10px 0;
 }
 /* end pricing  */
