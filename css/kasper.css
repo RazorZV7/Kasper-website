@@ -789,7 +789,11 @@ header .container nav .toggle-menu {
   padding: 100px 0;
 }
 .pricing .box {
-  min-width: 200px;
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .pricing .box button {
   margin-top: 40px;
@@ -803,11 +807,38 @@ header .container nav .toggle-menu {
   background-color: var(--main-color);
   color: white;
 }
-.pricing .pr-cont {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+@media (max-width: 578px) {
+  .pricing .pr-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+}
+@media (min-width: 578px) {
+  .pricing .pr-cont {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    grid-template-rows: repeat(2, auto);
+  }
+  .separator {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .pricing .pr-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
 }
 .pricing .contact {
   width: 40%;
