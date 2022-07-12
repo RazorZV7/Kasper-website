@@ -258,9 +258,15 @@ header .container nav .toggle-menu {
 }
 .landing .fa-angle-left {
   left: 20px;
+  cursor: pointer;
+}
+.landing .fa-angle-left:hover,
+.landing .fa-angle-right:hover {
+  color: var(--main-color);
 }
 .landing .fa-angle-right {
   right: 20px;
+  cursor: pointer;
 }
 .bullets {
   display: flex;
@@ -307,6 +313,12 @@ header .container nav .toggle-menu {
   margin-bottom: 50px;
   flex-direction: column;
   text-align: center;
+  padding: 20px 5px;
+  cursor: pointer;
+}
+.services .services-content .box:hover {
+  background-color: #eee;
+  /* color: white; */
 }
 .services .services-content .box i {
   margin: 0 0 40px;
@@ -418,7 +430,7 @@ header .container nav .toggle-menu {
   padding: 1em;
   text-transform: capitalize;
   text-align: center;
-  /* border: 1px solid; */
+  cursor: pointer;
 }
 .portfolio .shuffle li.active,
 .portfolio .shuffle li:hover {
@@ -785,6 +797,11 @@ header .container nav .toggle-menu {
   padding: 10px 25px;
   background-color: white;
   border: 1px solid var(--main-color);
+  cursor: pointer;
+}
+.pricing .box button:hover {
+  background-color: var(--main-color);
+  color: white;
 }
 .pricing .pr-cont {
   display: flex;
@@ -797,6 +814,18 @@ header .container nav .toggle-menu {
   margin: 60px auto 0;
   text-align: center;
 }
+.pricing .contact p {
+  text-transform: capitalize;
+}
+.pricing .contact button {
+  margin-top: 40px;
+  font-size: 15px;
+  padding: 10px 25px;
+  color: white;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+}
 .pricing .pr-cont .box .head {
   width: 100%;
   padding: 10px 0;
@@ -808,6 +837,23 @@ header .container nav .toggle-menu {
 }
 .pricing .pr-cont .box .head h3{
   font-size: 55px;
+  position: relative;
+}
+.pricing .pr-cont .box .head h3::before{
+  content: "$";
+  top: 17px;
+  left: 40px;
+  position: absolute;
+  font-size: 20px;
+  /* width: 3px; */
+  /* height: 3px; */
+}
+.pricing .pr-cont .box .head h3::after{
+  content: "/MO";
+  position: absolute;
+  right: 30px;
+  bottom: 17px;
+  font-size: 16px;
 }
 .pricing .feat-box {
   text-transform: capitalize;
