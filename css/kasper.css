@@ -951,6 +951,9 @@ header .container nav .toggle-menu {
   border: 1px solid white;
   border-right: none;
 }
+.mail #mail::-webkit-input-placeholder {
+  color: white;
+}
 .fa-envelope {
   position: absolute;
   left: 10px;
@@ -967,3 +970,45 @@ header .container nav .toggle-menu {
   cursor: pointer;
 }
 /* end mail  */
+/* start contact-us  */
+.contact-us {
+  padding: 100px 0;
+}
+.contact-us .form {
+  margin: 0 auto;
+  padding: 15px 0;
+  display: flex;
+  min-width: 260px;
+  max-width: 600px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.contact-us .form #name,
+.contact-us .form #email2 {
+  padding: 15px 10px;
+  width: 100%;
+}
+.contact-us .form #message{
+  width: 100%;
+  padding: 20px 10px;
+}
+.contact-us .form #send2 {
+  margin-top: 40px;
+  width: 150px;
+  margin: 0 auto;
+  text-transform: capitalize;
+  font-size: 15px;
+  padding: 10px 25px;
+  color: white;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+}
+#message::-webkit-input-placeholder,
+.contact-us .form #name::-webkit-input-placeholder,
+.contact-us .form #email2::-webkit-input-placeholder {
+  color: black;
+}
+/* end contact-us  */
